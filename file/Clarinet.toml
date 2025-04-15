@@ -1,13 +1,15 @@
 [project]
-name = "decentralized-affiliate"
-description = "A decentralized affiliate marketing system for influencers"
-authors = []
-telemetry = false
+name = "decentralized-affiliate-influencer"
 requirements = []
+costs_version = 2
 
 [contracts.influencer-affiliate]
 path = "contracts/influencer-affiliate.clar"
 depends_on = []
+
+[contracts.influencer-staking]
+path = "contracts/influencer-staking.clar"
+depends_on = ["influencer-affiliate"]
 
 [repl.analysis]
 passes = ["check_checker"]
